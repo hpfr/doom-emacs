@@ -288,7 +288,6 @@ When otherwise called, open a dired buffer and enable `dired-mu4e-attach-ctrl-c-
   (add-hook 'kill-buffer-hook #'+mu4e-kill-mu4e-h nil t))
 
 (defun +mu4e-kill-mu4e-h ()
-  ;; (prolusion-mail-hide)
   (cond
    ((and (modulep! :ui workspaces) (+workspace-exists-p +mu4e-workspace-name))
     (+workspace/delete +mu4e-workspace-name))
